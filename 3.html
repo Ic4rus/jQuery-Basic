@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html" charset="utf-8">
+<title>Selector trong jQuery</title>
+<script language="javascript" src="jquery-2.0.0.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		Container 1
+	</div>
+	<div class="container">
+		Container 2
+	</div>
+	<div class="container">
+		Container 3
+	</div>
+	<div class="container">
+		Container 4
+	</div>
+	<script>
+		var elements = $('.container');
+		
+		$(elements).css({
+			background: 'red'
+			});
+			
+		alert($(elements).html());
+	</script>
+</body>
+</html>
