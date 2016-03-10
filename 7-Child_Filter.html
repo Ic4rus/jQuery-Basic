@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Selectors - Child Filter</title>
+<script language="javascript" src="jquery-2.0.0.min.js"></script>
+<style type="text/css">
+.selected {
+	color: blue;
+}
+.active {
+	color: red;
+}
+</style>
+</head>
+
+<body>
+<div>
+	<span>The span 1</span>
+	<br>
+	<span>The span 2</span>
+	<br>
+	<span>The span 3</span>
+	<br>
+	<span>The span 4</span>
+	<br>
+	<span>The span 5</span>
+</div>
+<div>
+	<h2>Danh muc 1</h2>
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+		<li>Item 4</li>
+		<li>Item 5</li>
+	</ul>
+</div>
+<div>
+	<h2>Danh muc 2</h2>
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+		<li>Item 4</li>
+		<li>Item 5</li>
+	</ul>
+</div>
+<script>
+	// :first-child selector
+	// Khi hover chuot vao the span dau tien trong the div thi se bo xung class selected
+	$('div span:first-child').hover(function() {
+		$(this).addClass('selected');
+	}, function() {
+		$(this).removeClass('selected');
+	});
+	
+	// :first-of-type selector
+	// Them class active vao the span dau tien trong danh sach the span
+	$('span:first-of-type').addClass('active');
+	
+	// :last-child selector
+	// Khi hover chuot vao the span cuoi cung trong the div thi se bo xung class selected
+	$('div span:last-child').hover(function() {
+		$(this).addClass('selected');
+	}, function() {
+		$(this).removeClass('selected');
+	});
+	
+	// :last-of-type selector
+	// Them class active vao the span cuoi cung trong danh sach the span
+	$('span:last-of-type').addClass('active');
+	
+	// :nth-child(index) selector
+	// Them class active vao the li thu 2 nam trong the ul
+	$('ul li:nth-child(2)').addClass('active');
+	
+	// :nth-last-child(index) selector
+	// Them class active vao the li thu 2 tu duoi len nam trong the ul
+	$('ul li:nth-last-child(2)').addClass('active');
+	
+	// :nth-last-of-type(index) selector
+	// Them class active vao the li thu 2 tu duoi len nam trong the ul
+	$('ul li:nth-last-of-type(2)').addClass('active');
+	
+	// :ntn-of-type(index) selector
+	// Them class active vao the li thu 3 tu tren xuong nam trong the ul
+	$('ul li:ntn-of-type(3)').addClass('active');
+	
+	// :only-child selector
+	// Them class active vao the li la con duy nhat cua the ul
+	$('ul li:only-child').addClass('active');
+	
+	// :only-of-type selector
+	// Them class active vao the li la con duy nhat cua the ul
+	$('ul li:only-of-type').addClass('active');
+</script>
+</body>
+</html>

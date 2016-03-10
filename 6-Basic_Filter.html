@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Selector - Basic Filter</title>
+<script language="javascript" src="jquery-2.0.0.min.js"></script>
+<script>
+	// :animated selector
+	// Them class colored vao the div dang co hieu ung animated
+	$("div:animated").addClass('colored');
+	
+	// :eq selector
+	// Them mau do vao the td thu 2
+	$("td:eq(2)").css('color', 'red');
+	
+	// :even selector
+	// Them background mau xam cho row le trong table
+	$("tr:even").css('background-color', 'gray');
+	
+	// :first selector
+	// Them mau xanh vao cot dau tien trong table
+	$("td:first").css('color', 'blue');
+	
+	// :focus selector
+	// Lay gia tri cac o input khi duoc focus
+	$("input:focus").val();
+	
+	// :gt selector
+	// Thiet lap gia tri mau do cho cac o thu 4 tro di
+	$("td:gt(3)").css('background', 'red');
+	
+	// :header selector
+	// Thiet lap gia tri mau do cho tat ca cac the tu h1 -> h6
+	$(":header").css('background', 'red');
+	
+	// :lang selector
+	// Thiet lap mau do cho the co lang la tieng anh va mau vang cho lang la tieng viet
+	$("div:lang(en-us)").css('background', 'red');
+	$("div:lang(vi-vn)").css('background', 'yellow');
+	
+	// :last selector
+	// Thiet lap mau do cho o cuoi cung trong bang
+	$("tr td:last").css('color', 'red');
+	
+	// :lt selector
+	// Thiet lap mau do cho o thu 1 va thu 3 trong table
+	$("td:lt(3)").css('color', 'red');
+	
+	// :not selector
+	// Thiet lap mau vang cho the span khong chua class active
+	$("span:not(.active)").css('color', 'yellow');
+	
+	// :odd selector
+	// Thiet lap mau do cho o chan trong table
+	$("td:odd").css('background-color', 'red');
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Selectors - Content Filter</title>
+<script language="javascript" src="jquery-2.0.0.min.js"></script>
+<style type="text/css">
+.active {
+	color: red;
+}
+</style>
+</head>
+
+<body>
+<div>freetuts.net</div>
+<div></div>
+<div>
+	<p>Dong 3</p>
+</div>
+<div>
+	<p class="delete">Dong 4</p>
+</div>
+<script>
+	// :contains selector
+	// Them class active vao the div co chu freetuts.net
+	$("div:contains('freetuts.net')").addClass('active');
+	
+	// :empty selector
+	// Them class active vao the div rong
+	$('div:empty').addClass('active');
+	
+	// :has selector
+	// Them class active vao the div co chua the p
+	$('div:has(p)').addClass('active');
+	
+	// :parent selector
+	// Them class active vao cha cua the p co class delete
+	$('div p.delete:parent').addClass('active');
+</script>
+</body>
+</html>

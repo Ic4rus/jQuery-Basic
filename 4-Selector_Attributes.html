@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Selectors - Attributes</title>
+</head>
+
+<body>
+<script>
+	// Them class selected vao the a co thuoc tinh title va gia tri title thoa man:
+	// - Bat dau bang chu freetuts
+	$('a[title|="freetuts"]').addClass('selected');
+	
+	// - Ton tai chu freetuts
+	$('a[title*="freetuts"]').addClass('selected');
+	
+	// - Xuat hien tu freetuts
+	$('a[title~="freetuts"]').addClass('selected');
+	
+	// - Chuoi ky tu cuoi cung la freetuts
+	$('a[title$="freetuts"]').addClass('selected');
+	
+	// - Gia tri dung bang freetuts
+	$('a[title="freetuts"]').addClass('selected');
+	
+	// - Gia tri khong bang freetuts
+	$('a[title!="freetuts"]').addClass('selected');
+	
+	// - Chi can thuoc tinh title
+	$('a[title]').addClass('selected');
+</script>
+</body>
+</html>

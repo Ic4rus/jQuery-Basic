@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Selectors - Form Filter</title>
+<script language="javascript" src="jquery-2.0.0.min.js"></script>
+</head>
+
+<body>
+<input type="text" class="username" value="Username">
+<br>
+<input type="checkbox" checked>
+<br>
+<input type="checkbox">
+<br>
+<input type="checkbox" checked>
+<br>
+<input type="password">
+<br>
+<input type="file">
+<br>
+<input type="submit">
+<br>
+<input type="button">
+<hr>
+<script>
+	// Lay the input co class username
+	var username_element = $(':input.username');
+	
+	var checkboxs = $(':checked');
+	for (var i = 0; i < checkboxs.length; i++) {
+		document.write('Giá trị là: ' + $(checkboxs[i]).val() + '<br>');
+	}
+	
+	$(':text').css('border', 'solid 2px red');
+	$(':password').css('border', 'solid 2px blue');
+	$(':file').css('border', 'solid 2px pink');
+	$(':selected').parent().css('border', 'solid 2px green');
+	$(':submit').css('border', 'solid 2px black');
+	$(':button').css('border', 'solid 2px yellow');
+
+</script>
+</body>
+</html>
