@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Attributes - attr & prop</title>
+<script language="javascript" src="jquery-2.0.0.min.js"></script>
+</head>
+
+<body>
+	<h1>Ví dụ 1</h1>
+	<strong>Sở thích của bạn là gì?</strong>
+	<br>
+	<input type="checkbox" name="eat" value="1" id="chkEat">
+	Ăn
+	<br>
+	<input type="button" id="btnView" value="Xem name và type">
+	<input type="button" id="btnChangeTypeToText" value="Đổi type thành text">
+	<input type="button" id="btnChangeTypeToRadio" value="Đổi type thành radio">
+	<hr>
+	<h1>Ví dụ 2</h1>
+	<input type="checkbox" name="eat2" value="1" id="chkEat2">
+	<br>
+	<input type="button" id="btnViewName" value="Xem tên">
+	<input type="button" id="btnCheck" value="Kiểm tra có check hay không">
+	
+	
+	<script>
+		$(document).ready(function() {
+			// Bat su kien click cho button view
+			$('#btnView').click(function() {
+				// Lay ten
+				var name = $('#chkEat').attr('name');
+				
+				// Lay loai
+				var type = $('#chkEat').attr('type');
+				
+				// Hien thi ten va loai
+				alert('Name là ' + name + ' và type là ' + type);
+			});
+			
+			// Bat su kien click cho button doi type thanh text
+			$('#btnChangeTypeToText').click(function() {
+				// Thay doi type thanh text
+				$('#chkEat').attr('type', 'text');
+			});
+			
+			// Bat su kien click cho button doi type thanh radio
+			$('#btnChangeTypeToRadio').click(function() {
+				// Thay doi type thanh radio
+				$('#chkEat').attr('type', 'radio');
+			});
+			
+			// Xem ten cua checkbox thu 2
+			$('#btnViewName').click(function() {
+				alert($('#chkEat2').prop('name'));
+			});
+			
+			// Kiem tra checkbox thu 2 co duoc check hay khong
+			$('#btnCheck').click(function() {
+				alert($('#chkEat2').prop('checked'));
+			});
+		});
+	</script>
+</body>
+</html>

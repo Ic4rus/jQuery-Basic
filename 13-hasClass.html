@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Attributes - hasClass</title>
+<script language="javascript" src="jquery-2.0.0.min.js"></script>
+<style type="text/css">
+.yellow {
+	height: 200px;
+	background: yellow;
+}
+.red {
+	height: 200px;
+	background: red;
+}
+</style>
+<script>
+	$(document).ready(function() {
+		$('#btnReverse').click(function() {
+			// Lay danh sach the div
+			var objects = $('div');
+			
+			// Lap danh sach
+			var length = objects.length;
+			for (var i = 0; i <= length; i++) {
+				if ($(objects[i]).hasClass('red')) {
+					$(objects[i]).removeClass('red').addClass('yellow');
+				} else if ($(objects[i]).hasClass('yellow')) {
+					$(objects[i]).removeClass('yellow').addClass('red');
+				}
+			}
+		});		
+	});
+</script>
+</head>
+
+<body>
+	<div class="yellow"></div>
+	<div class="red"></div>
+	<input type="button" value="Đảo ngược màu" id="btnReverse">
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Attributes - addClass & removeClass</title>
+<script language="javascript" src="jquery-2.0.0.min.js"></script>
+<style type="text/css">
+.active {
+	border: solid 1px;
+	color: red;
+	padding: 10px;
+}
+</style>
+</head>
+
+<body>
+	<h1 style="font-style: initial">Xin chào các bạn</h1>
+	
+	<input type="button" id="btnAdd" value="Add">
+	<input type="button" id="btnRemove" value="Remove">
+	
+	<script>
+		// Them class
+		$(document).ready(function(e) {
+			$('#btnAdd').click(function() {
+				$('h1').addClass('active');
+			});
+		});
+		
+		// Bo class
+		$(document).ready(function() {
+			$('#btnRemove').click(function() {
+				$('h1').removeClass('active');
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Attributes - removeAttr</title>
+<script language="javascript" src="jquery-2.0.0.min.js"></script>
+</head>
+
+<body>
+	<input type="checkbox" value="Giá trị input" id="input">
+	Ăn
+	<br>
+	<input type="button" id="btnRemove" value="Xóa value">
+	<input type="button" id="btnAdd" value="Thêm thuộc tính type">
+	<script>
+		$(document).ready(function() {
+			// Xoa thuoc tinh value khi click vao button 1
+			$('#btnRemove').click(function() {
+				$('#input').removeAttr('value');
+			});
+			
+			// Them thuoc tinh type: radio
+			$('#btnAdd').click(function() {
+				$('#input').attr('type', 'radio');
+			});
+		});
+	</script>
+</body>
+</html>
